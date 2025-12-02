@@ -558,3 +558,42 @@ label {
     min-height: 36px;
   }
 }
+
+.w-16 {
+  width: 4rem;
+  height: 4rem;
+  min-width: 4rem;
+  min-height: 4rem;
+  max-width: 4rem;
+  max-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+/* Mobile: smaller chess squares */
+@media (max-width: 768px) {
+  .w-16 {
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    font-size: 1.75rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .w-16 {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    max-width: 2rem;
+    max-height: 2rem;
+    font-size: 1.25rem;
+  }
+}
