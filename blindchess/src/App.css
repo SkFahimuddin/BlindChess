@@ -20,6 +20,13 @@ body {
   padding: 2rem;
 }
 
+/* Mobile: smaller padding */
+@media (max-width: 768px) {
+  .p-8 {
+    padding: 1rem;
+  }
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -32,6 +39,14 @@ body {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+/* Mobile: smaller heading */
+@media (max-width: 768px) {
+  .text-4xl {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
 }
 
 .font-bold {
@@ -52,6 +67,13 @@ body {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+/* Mobile: smaller margins */
+@media (max-width: 768px) {
+  .mb-6 {
+    margin-bottom: 1rem;
+  }
 }
 
 .text-center {
@@ -78,6 +100,13 @@ body {
   padding: 1.5rem;
 }
 
+/* Mobile: smaller padding */
+@media (max-width: 768px) {
+  .p-6 {
+    padding: 1rem;
+  }
+}
+
 .flex {
   display: flex;
 }
@@ -88,6 +117,13 @@ body {
 
 .gap-4 {
   gap: 1rem;
+}
+
+/* Mobile: smaller gaps */
+@media (max-width: 768px) {
+  .gap-4 {
+    gap: 0.5rem;
+  }
 }
 
 .flex-wrap {
@@ -115,9 +151,34 @@ button {
   font-size: 14px;
 }
 
+/* Mobile: smaller buttons */
+@media (max-width: 768px) {
+  button {
+    padding: 0.5rem 0.75rem;
+    font-size: 12px;
+    gap: 0.25rem;
+  }
+  
+  button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Disable hover effect on mobile */
+@media (max-width: 768px) {
+  button:hover {
+    transform: none;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
 }
 
 button:disabled {
@@ -174,6 +235,13 @@ button:disabled {
   border-width: 4px;
 }
 
+/* Mobile: thinner border */
+@media (max-width: 768px) {
+  .border-4 {
+    border-width: 2px;
+  }
+}
+
 .border-gray-800 {
   border-color: #1f2937;
 }
@@ -184,6 +252,23 @@ button:disabled {
 
 .w-16 {
   width: 4rem;
+  height: 4rem;
+}
+
+/* Mobile: smaller chess squares */
+@media (max-width: 768px) {
+  .w-16 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .w-16 {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .h-16 {
@@ -192,6 +277,19 @@ button:disabled {
 
 .text-4xl {
   font-size: 2.25rem;
+}
+
+/* Mobile: smaller chess pieces */
+@media (max-width: 768px) {
+  .w-16.h-16 > div {
+    font-size: 1.75rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .w-16.h-16 > div {
+    font-size: 1.25rem !important;
+  }
 }
 
 .bg-amber-100 {
@@ -207,6 +305,14 @@ button:disabled {
   line-height: 2rem;
 }
 
+/* Mobile: smaller text */
+@media (max-width: 768px) {
+  .text-2xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 .text-gray-800 {
   color: #1f2937;
 }
@@ -218,6 +324,14 @@ button:disabled {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+/* Mobile: even smaller text */
+@media (max-width: 768px) {
+  .text-sm {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 .text-blue-600 {
@@ -238,6 +352,14 @@ input[type="text"] {
   border: 2px solid #cbd5e1;
   border-radius: 0.5rem;
   font-size: 16px;
+}
+
+/* Mobile: smaller input */
+@media (max-width: 768px) {
+  input[type="text"] {
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+  }
 }
 
 input[type="text"]:focus {
@@ -301,6 +423,14 @@ select {
   cursor: pointer;
 }
 
+/* Mobile: smaller select */
+@media (max-width: 768px) {
+  select {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
 .border-t {
   border-top: 1px solid #e5e7eb;
 }
@@ -314,6 +444,14 @@ select {
   line-height: 1.75rem;
 }
 
+/* Mobile: smaller heading */
+@media (max-width: 768px) {
+  .text-lg {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .bg-gray-50 {
   background-color: #f9fafb;
 }
@@ -322,8 +460,22 @@ select {
   padding: 1rem;
 }
 
+/* Mobile: smaller padding */
+@media (max-width: 768px) {
+  .p-4 {
+    padding: 0.75rem;
+  }
+}
+
 .max-h-48 {
   max-height: 12rem;
+}
+
+/* Mobile: smaller max height */
+@media (max-width: 768px) {
+  .max-h-48 {
+    max-height: 8rem;
+  }
 }
 
 .overflow-y-auto {
@@ -346,8 +498,11 @@ select {
   width: 2rem;
 }
 
-.w-16 {
-  width: 4rem;
+/* Mobile: smaller width */
+@media (max-width: 768px) {
+  .w-8 {
+    width: 1.5rem;
+  }
 }
 
 .bg-slate-800 {
@@ -362,4 +517,44 @@ label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Mobile: wrap labels on small screens */
+@media (max-width: 768px) {
+  label {
+    gap: 0.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Make sure the container doesn't overflow on mobile */
+@media (max-width: 768px) {
+  .max-w-4xl {
+    width: 100%;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Stack button rows on very small screens */
+  @media (max-width: 400px) {
+    .flex.flex-wrap {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button, input, select {
+    min-height: 36px;
+  }
 }
